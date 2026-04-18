@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xochité - Bienestar Natural</title>
+    <style>
+        :root {
+            --verde-xochite: #2d5a27;
+            --dorado-miel: #d4a373;
+            --crema: #fefae0;
+            --texto: #333;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--texto);
+            background-color: #fff;
+        }
+
+        /* Navegación */
+        nav {
+            background: var(--verde-xochite);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        /* Hero Section */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&q=80&w=1000');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        header h1 { font-size: 4rem; margin: 0; letter-spacing: 4px; }
+
+        .seccion { padding: 4rem 2rem; max-width: 1100px; margin: auto; }
+        h2 { text-align: center; color: var(--verde-xochite); border-bottom: 2px solid var(--dorado-miel); display: inline-block; margin-bottom: 2rem; width: 100%; }
+
+        /* Productos */
+        .grid-productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .producto {
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            text-align: center;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .producto:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .precio { color: var(--verde-xochite); font-weight: bold; font-size: 1.4rem; display: block; margin: 1rem 0; }
+
+        /* Promociones y Reseñas */
+        .promo-banner {
+            background: var(--crema);
+            padding: 2rem;
+            border-left: 5px solid var(--dorado-miel);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .reseña {
+            font-style: italic;
+            background: #f9f9f9;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+        }
+
+        /* Contacto y Ubicación */
+        .footer-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            background: #f4f4f4;
+            padding: 2rem;
+        }
+
+        .mapa-ejemplo {
+            width: 100%;
+            height: 200px;
+            background: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .footer-info { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#promociones">Promociones</a>
+        <a href="#reseñas">Reseñas</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <header id="inicio">
+        <h1>XOCHITÉ</h1>
+        <p>Esencia natural en cada producto</p>
+    </header>
+
+    <section id="productos" class="seccion">
+        <h2>Nuestros Productos</h2>
+        <div class="grid-productos">
+            <article class="producto">
+                <h3>Té en Jalea</h3>
+                <p>Concentrado natural para diluir, endulzado suavemente.</p>
+                <span class="precio">$180.00 MXN</span>
+                <button>Más información</button>
+            </article>
+
+            <article class="producto">
+                <h3>Cápsulas de Nopal</h3>
+                <p>Suplemento 100% orgánico rico en fibra y minerales.</p>
+                <span class="precio">$250.00 MXN</span>
+                <button>Más información</button>
+            </article>
+
+            <article class="producto">
+                <h3>Miel de Agave</h3>
+                <p>Sustituto de azúcar de bajo índice glucémico.</p>
+                <span class="precio">$145.00 MXN</span>
+                <button>Más información</button>
+            </article>
+        </div>
+    </section>
+
+    <section id="promociones" class="seccion">
+        <h2>Promociones</h2>
+        <div class="promo-banner">
+            <h3>🌿 Pack Bienestar</h3>
+            <p>Lleva los 3 productos principales por solo <strong>$499.00 MXN</strong></p>
+            <p><small>*Válido hasta agotar existencias.</small></p>
+        </div>
+    </section>
+
+    <section id="reseñas" class="seccion">
+        <h2>Reseñas de Clientes</h2>
+        <div class="reseña">
+            <p>"La miel de agave tiene una textura increíble, la uso todos los días para mi café."</p>
+            <strong>- Mariana R.</strong>
+        </div>
+        <div class="reseña">
+            <p>"El té en jalea es muy práctico y el sabor es muy auténtico. ¡Recomendado!"</p>
+            <strong>- José Luis M.</strong>
+        </div>
+    </section>
+
+    <section id="contacto" class="footer-info">
+        <div>
+            <h3>Contacto</h3>
+            <p>📞 <strong>Teléfono:</strong> +52 55 1234 5678</p>
+            <p>📧 <strong>Email:</strong> ventas@xochite.com.mx</p>
+            <p>📱 <strong>WhatsApp:</strong> +52 55 9876 5432</p>
+        </div>
+        <div>
+            <h3>Ubicación</h3>
+            <p>Av. Paseo de la Reforma #123, <br>Colonia Juárez, CDMX.</p>
+            <div class="mapa-ejemplo">
+                [Espacio para Mapa de Google Maps]
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 2rem; background: var(--verde-xochite); color: white;">
+        <p>&copy; 2026 Xochité - Productos Naturales</p>
+    </footer>
+
+</body>
+</html>
