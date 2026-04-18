@@ -1,0 +1,175 @@
+/* Configuración de Colores y Variables */
+:root {
+    --verde-xochite: #2d5a27;
+    --dorado-miel: #d4a373;
+    --crema: #fefae0;
+    --texto: #333;
+    --blanco: #ffffff;
+}
+
+* { 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--texto);
+    background-color: var(--blanco);
+}
+
+/* Navegación */
+nav {
+    background: var(--verde-xochite);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--dorado-miel);
+}
+
+/* Hero Section / Encabezado */
+header {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&q=80&w=1000');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+header h1 { 
+    font-size: 4rem; 
+    margin: 0; 
+    letter-spacing: 4px; 
+}
+
+/* Secciones Generales */
+.seccion { 
+    padding: 4rem 2rem; 
+    max-width: 1100px; 
+    margin: auto; 
+}
+
+h2 { 
+    text-align: center; 
+    color: var(--verde-xochite); 
+    border-bottom: 2px solid var(--dorado-miel); 
+    display: inline-block; 
+    margin-bottom: 2rem; 
+    width: 100%; 
+}
+
+/* Grid de Productos */
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.producto {
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.3s;
+    background: white;
+}
+
+.producto:hover { 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+    transform: translateY(-5px);
+}
+
+.precio { 
+    color: var(--verde-xochite); 
+    font-weight: bold; 
+    font-size: 1.4rem; 
+    display: block; 
+    margin: 1rem 0; 
+}
+
+button {
+    background-color: var(--verde-xochite);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #3e7a36;
+}
+
+/* Promociones y Reseñas */
+.promo-banner {
+    background: var(--crema);
+    padding: 2rem;
+    border-left: 5px solid var(--dorado-miel);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.reseña {
+    font-style: italic;
+    background: #f9f9f9;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border-left: 3px solid var(--verde-xochite);
+}
+
+/* Contacto y Ubicación */
+.footer-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    background: #f4f4f4;
+    padding: 2rem;
+}
+
+.mapa-ejemplo {
+    width: 100%;
+    height: 200px;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center; 
+    padding: 2rem; 
+    background: var(--verde-xochite); 
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-info { grid-template-columns: 1fr; }
+    header h1 { font-size: 2.5rem; }
+}
